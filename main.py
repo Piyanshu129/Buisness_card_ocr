@@ -6,6 +6,9 @@ from easyocr_logic import extract_text_easyocr, categorize_with_easyocr
 
 app = FastAPI(title="Business Card OCR API")
 
+@app.get("/")
+async def root():
+    return {"message": "Business Card OCR API is live"}
 # source ocr-api/bin/activate
 #### uvicorn main:app --port 8000 --reload
 #ngork 8000
